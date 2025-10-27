@@ -1,0 +1,109 @@
+{
+  "permissions": {
+    "allow": [
+      "FileSystem(backend/**)",
+      "FileSystem(frontend/**)",
+      "FileSystem(.claude/**)",
+      "FileSystem(docker-compose*.yml)",
+      "FileSystem(Dockerfile*)",
+      "FileSystem(requirements.txt)",
+      "FileSystem(package*.json)",
+      "FileSystem(*.md)",
+      "FileSystem(*.sh)",
+      "FileSystem(*.py)",
+      "FileSystem(*.ts)",
+      "FileSystem(*.tsx)",
+      "FileSystem(.env.example)",
+      "Bash(pip*)",
+      "Bash(docker*)",
+      "Bash(git*)",
+      "Bash(npm*)",
+      "Bash(python*)",
+      "Bash(uvicorn*)",
+      "Bash(celery*)",
+      "Bash(redis*)",
+      "Bash(psql*)",
+      "Bash(curl*)",
+      "Bash(brew*)",
+      "Bash(nmap*)",
+      "Bash(nuclei*)",
+      "Bash(ls*)",
+      "Bash(cat*)",
+      "Bash(echo*)",
+      "Bash(cd*)",
+      "Bash(pwd*)",
+      "Bash(mkdir*)",
+      "Bash(touch*)",
+      "Bash(chmod*)",
+      "Bash(ps*)",
+      "Bash(pkill*)",
+      "Bash(tail*)",
+      "Bash(grep*)",
+      "Git(*)"
+    ],
+    "deny": [
+      "FileSystem(/etc/**)",
+      "FileSystem(/var/**)",
+      "FileSystem(/usr/**)",
+      "FileSystem(/System/**)",
+      "FileSystem(~/.ssh/**)",
+      "FileSystem(.env)",
+      "Bash(rm -rf /*)",
+      "Bash(rm -rf /)",
+      "Bash(shutdown*)",
+      "Bash(reboot*)",
+      "Bash(sudo rm -rf*)",
+      "Bash(dd if=/dev/zero*)",
+      "Bash(mkfs*)",
+      "Bash(format*)"
+    ]
+  },
+  "defaultMode": "acceptEdits",
+  "projectSettings": {
+    "name": "PHANTOM Security AI",
+    "description": "Autonomous vulnerability detection platform powered by artificial intelligence",
+    "version": "1.0.0",
+    "primaryLanguages": ["Python", "TypeScript"],
+    "frameworks": {
+      "backend": ["FastAPI", "Celery", "SQLAlchemy"],
+      "frontend": ["Next.js", "React", "Tailwind CSS"],
+      "ai": ["OpenAI GPT-4"],
+      "security": ["Nmap", "Nuclei"]
+    },
+    "databases": ["PostgreSQL", "Redis"],
+    "deployment": ["Docker", "Vercel", "Railway"]
+  },
+  "workflowSettings": {
+    "autoFormat": true,
+    "lintOnSave": true,
+    "testBeforeCommit": false,
+    "preferredPackageManager": "npm",
+    "pythonVersion": "3.11",
+    "nodeVersion": "18"
+  },
+  "aiAssistantSettings": {
+    "codeStyle": {
+      "python": {
+        "indentation": 4,
+        "quotes": "double",
+        "maxLineLength": 100
+      },
+      "typescript": {
+        "indentation": 2,
+        "quotes": "single",
+        "semicolons": true
+      }
+    },
+    "preferredResponses": {
+      "verbose": false,
+      "includeExamples": true,
+      "explainDecisions": false
+    }
+  },
+  "securitySettings": {
+    "scanOnlyAuthorizedTargets": true,
+    "defensiveSecurityOnly": true,
+    "noMaliciousCode": true,
+    "protectSensitiveData": true
+  }
+}
